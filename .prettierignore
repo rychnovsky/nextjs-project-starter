@@ -1,0 +1,11 @@
+# .prettierignore
+package.json
+package-lock.json
+yarn.lock
+**/*.generated.ts
+**/__generate__/
+**/__generated__/
+**/__globalTypes.ts
+graphql-schema.json
+build/
+.next/

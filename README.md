@@ -1,4 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Project Starter
+
+"Not so minimal" config to start building any new [Next.js](https://nextjs.org/) project with styled-components and all linting and testing tools ready, with a highly opinionated folder structure.
+
+As of 03/2022, this setup uses all the new features of Next.js 12.1
+
+## Folder Structure
+
+- `pages/` - contains all app pages
+- `src/api/` - contains api calls
+- `src/components/` - contains simple reusable components
+- `src/containers/` - contains more complex reusable components with side-effects
+- `src/pages/` - contains individual components for every page (if the child component is used only on one page, place it nested under its parent page)
 
 ## Getting Started
 
@@ -12,11 +24,25 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `src/pages/HomePage/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Dependencies
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- `styled-components` - fully setup SSR and theming
+- `jest` - unit testing. Run by command `yarn test`
+
+## Code Quality Tools
+
+Project uses: Eslint, Stylelint, Prettier.
+
+All of them are run as `pre-commit` and `pre-push` hooks using Husky and LintStaged.
+
+Respect these tools and do not push non-formated code to the repository.
+
+- `yarn format` - runs prettier on all files
+- `yarn format:check` - only checks formating issues using prettier
+- `yarn lint:ts` - lints JS and TS file using eslint
+- `yarn lint:css` - lints .CSS files and styled-components using stylelint
 
 ## Learn More
 
@@ -26,9 +52,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
