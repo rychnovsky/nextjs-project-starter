@@ -7,6 +7,9 @@ const theme = {
     bodyBackground: colors.primary,
     textColor: colors.secondary,
   },
+  container: {
+    maxWidth: 1080,
+  },
 }
 
 export type AppStyledThemeType = typeof theme

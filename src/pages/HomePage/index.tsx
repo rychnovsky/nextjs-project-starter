@@ -12,7 +12,7 @@ const HomePage: NextPage = () => {
   return (
     <Layout>
       <H1>
-        Welcome to <a href='https://nextjs.org'>Next.js!</a>
+        Welcome to <a href='https://nextjs.org'>Next.js example project!</a>
       </H1>
 
       <S.ImgWrap>

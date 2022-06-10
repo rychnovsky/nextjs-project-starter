@@ -1,16 +1,20 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import { PropsWithChildren } from 'react'
 
 import Header from '../Header'
 import Footer from '../Footer'
+import Container from '../Container'
 
 import * as S from './styled'
 
-const Layout: React.FC = ({ children }) => {
+type Props = PropsWithChildren<{}>
+
+const Layout: React.FC<Props> = ({ children }) => {
   return (
     <S.Wrap>
       <Header />
-      <S.Main>{children}</S.Main>
+      <S.Main>
+        <Container>{children}</Container>
+      </S.Main>
       <Footer />
     </S.Wrap>
   )

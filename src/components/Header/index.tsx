@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import { routes } from 'src/constants/routes'
 
 import * as S from './styled'
+import Container from '../Container'
 
 const Header: React.VFC = () => {
   const router = useRouter()
@@ -16,17 +17,19 @@ const Header: React.VFC = () => {
 
   return (
     <S.Header>
-      <nav>
-        <S.Ul>
-          {links.map((link) => (
-            <S.Li active={router.pathname === link.href} key={link.href}>
-              <Link href={link.href}>
-                <a>{link.text}</a>
-              </Link>
-            </S.Li>
-          ))}
-        </S.Ul>
-      </nav>
+      <Container>
+        <nav>
+          <S.Ul>
+            {links.map((link) => (
+              <S.Li active={router.pathname === link.href} key={link.href}>
+                <Link href={link.href}>
+                  <a>{link.text}</a>
+                </Link>
+              </S.Li>
+            ))}
+          </S.Ul>
+        </nav>
+      </Container>
     </S.Header>
   )
 }

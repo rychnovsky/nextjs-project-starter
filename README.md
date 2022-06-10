@@ -1,8 +1,8 @@
 # Next.js Project Starter
 
-"Not so minimal" config to start building any new [Next.js](https://nextjs.org/) project with styled-components and all linting and testing tools ready, with a highly opinionated folder structure.
+"Not so minimal" boilerplate to start building any new [Next.js](https://nextjs.org/) project with styled-components and all linting and testing tools ready, with a highly opinionated folder structure.
 
-As of 03/2022, this setup uses all the new features of Next.js 12.1
+As of 06/2022, this setup uses all the new features of Next.js 12.1 and React 18
 
 ## Folder Structure
 
@@ -14,7 +14,15 @@ As of 03/2022, this setup uses all the new features of Next.js 12.1
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
+
+```bash
+npm install
+# or
+yarn
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev

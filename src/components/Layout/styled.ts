@@ -9,8 +9,4 @@ export const Wrap = styled.div`
 export const Main = styled.main`
   flex: 1;
   padding: 12px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 `
