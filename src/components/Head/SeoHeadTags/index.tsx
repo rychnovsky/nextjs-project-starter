@@ -7,14 +7,13 @@ type Props = {
 }
 
 const SeoHeadTags: React.FC<Props> = ({ pageTitle, description }) => {
+  const title = `${pageTitle}${
+    process.env.NODE_ENV === 'development' ? ` [${process.env.NODE_ENV}]` : ''
+  }`
+
   return (
     <Head>
-      <title key='title'>
-        {pageTitle}
-        {process.env.NODE_ENV === 'development'
-          ? ` [${process.env.NODE_ENV}]`
-          : ''}
-      </title>{' '}
+      <title key='title'>{title}</title>
       <meta name='description' content={description} key='description'></meta>
     </Head>
   )
