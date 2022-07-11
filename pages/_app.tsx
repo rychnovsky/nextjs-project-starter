@@ -5,7 +5,7 @@ import GlobalStyle from 'src/styles/globalStyles'
 import { theme } from 'src/styles/styledTheme'
 import SeoHeadTags from 'src/components/Head/SeoHeadTags'
 
-const MyApp: React.VFC<AppProps> = ({ Component, pageProps }) => {
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <StyledThemeProvider theme={theme}>
       <SeoHeadTags

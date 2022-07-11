@@ -2,7 +2,7 @@ import React from 'react'
 
 import * as S from './styled'
 
-const Footer: React.VFC = () => {
+const Footer: React.FC = () => {
   return <S.Footer>Next.js starter</S.Footer>
 }
 

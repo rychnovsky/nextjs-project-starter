@@ -4,10 +4,10 @@ import { useRouter } from 'next/router'
 
 import { routes } from 'src/constants/routes'
 
-import * as S from './styled'
 import Container from '../Container'
+import * as S from './styled'
 
-const Header: React.VFC = () => {
+const Header: React.FC = () => {
   const router = useRouter()
 
   const links = [
