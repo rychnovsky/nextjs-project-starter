@@ -22,9 +22,7 @@ const Header: React.FC = () => {
           <S.Ul>
             {links.map((link) => (
               <S.Li active={router.pathname === link.href} key={link.href}>
-                <Link href={link.href}>
-                  <a>{link.text}</a>
-                </Link>
+                <Link href={link.href}>{link.text}</Link>
               </S.Li>
             ))}
           </S.Ul>
