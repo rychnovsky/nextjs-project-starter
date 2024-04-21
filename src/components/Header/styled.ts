@@ -9,13 +9,13 @@ export const Ul = styled.ul`
   display: flex;
 `
 
-export const Li = styled.li<{ active: boolean }>`
+export const Li = styled.li<{ $active: boolean }>`
   &:not(:first-child) {
     margin-left: 12px;
   }
 
-  ${({ active, theme }) =>
-    active &&
+  ${({ $active, theme }) =>
+    $active &&
     css`
       color: ${theme.colors.alpha};
     `}

@@ -21,7 +21,7 @@ const Header: React.FC = () => {
         <nav>
           <S.Ul>
             {links.map((link) => (
-              <S.Li active={router.pathname === link.href} key={link.href}>
+              <S.Li $active={router.pathname === link.href} key={link.href}>
                 <Link href={link.href}>{link.text}</Link>
               </S.Li>
             ))}

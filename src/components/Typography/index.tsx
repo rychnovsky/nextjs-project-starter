@@ -70,5 +70,9 @@ export const PStyles = css<IPProps>`
 export const P = styled.p<IPProps>`
   ${PStyles};
 `
-export const P2 = styled((props) => <P {...props} variant='p2' />)``
-export const P3 = styled((props) => <P {...props} variant='p3' />)``
+export const P2 = styled((props: React.ComponentProps<typeof P>) => (
+  <P {...props} variant='p2' />
+))``
+export const P3 = styled((props: React.ComponentProps<typeof P>) => (
+  <P {...props} variant='p3' />
+))``
